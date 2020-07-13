@@ -26,7 +26,7 @@ public class Order {
 
     @OneToOne
     @JoinColumn(name = "discount_id")
-    private Discount discount;
+    private Discount orderDiscount;
 
     @Size(min = 3, max = 52)
     @Pattern(regexp = "^[a-zA-Z\\s]+$")
@@ -115,12 +115,12 @@ public class Order {
         this.orderDetailsList = orderDetailsList;
     }
 
-    public Discount getDiscount() {
-        return discount;
+    public Discount getOrderDiscount() {
+        return orderDiscount;
     }
 
-    public void setDiscount(Discount discount) {
-        this.discount = discount;
+    public void setOrderDiscount(Discount discount) {
+        this.orderDiscount = discount;
     }
 
     public String getShipName() {

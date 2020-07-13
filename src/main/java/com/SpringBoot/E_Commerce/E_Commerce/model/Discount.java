@@ -2,7 +2,12 @@ package com.SpringBoot.E_Commerce.E_Commerce.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -17,7 +22,7 @@ public class Discount {
     @JsonIgnore
     private List<Order> orders;
 
-    @OneToMany(mappedBy = "cartDiscount")
+    @OneToMany(mappedBy = "cartDiscout")
     private List<Cart> carts;
 
     @NotBlank

@@ -2,7 +2,17 @@ package com.SpringBoot.E_Commerce.E_Commerce.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
@@ -22,7 +32,7 @@ public class Cart {
     private List<CartItem> cartItemList;
 
     @ManyToOne
-    @JoinColumn("discount_id")
+    @JoinColumn(name = "discount_id")
     private Discount cartDiscout;
 
     @NotNull
