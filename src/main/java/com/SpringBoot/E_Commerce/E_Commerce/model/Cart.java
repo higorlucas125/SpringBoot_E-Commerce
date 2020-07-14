@@ -33,7 +33,7 @@ public class Cart {
 
     @ManyToOne
     @JoinColumn(name = "discount_id")
-    private Discount cartDiscout;
+    private Discount cartDiscount;
 
     @NotNull
     private Float totalPrice;
@@ -69,12 +69,12 @@ public class Cart {
         this.cartItemList = cartItemList;
     }
 
-    public Discount getCartDiscout() {
-        return cartDiscout;
+    public Discount getCartDiscount() {
+        return cartDiscount;
     }
 
-    public void setCartDiscout(Discount cartDiscout) {
-        this.cartDiscout = cartDiscout;
+    public void setCartDiscount(Discount cartDiscout) {
+        this.cartDiscount = cartDiscout;
     }
 
     public Float getTotalPrice() {
